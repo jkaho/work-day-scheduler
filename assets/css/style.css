@@ -33,6 +33,10 @@ textarea {
     border-radius: 15px;
 }
 
+div {
+    padding: 0 !important;
+}
+
 .row {
     /* white-space: pre-wrap; -> this is causing the textarea to shift downwards*/
     height: 80px;
