@@ -17,11 +17,13 @@
 $(document).ready(function() {
     var currentDay = moment().format('dddd, MMMM Do, YYYY');
     $("#currentDay").text(currentDay);
-    
+
+    var currentHour = moment().format('H');
+
     $(".time-block").each(function() {
-        if (moment().format('H') === this.id) {
+        if (parseInt(currentHour) === parseInt(this.id)) {
             $(this).addClass("present");
-        } else if (moment().format('H') > this.id) {
+        } else if (parseInt(currentHour) > parseInt(this.id)) {
             $(this).addClass("past");
         } else {
             $(this).addClass("future");
