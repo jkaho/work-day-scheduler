@@ -47,9 +47,9 @@ $(document).ready(function() {
     }
 
     function initialise() {
-        var userEvent = JSON.parse(localStorage.getItem("events"));
+        var userEvent = JSON.parse(localStorage.getItem("storedEvents"));
         if (userEvent !== null) {
-            events = userEvent;
+            storedEvents = userEvent;
         }
 
         renderEvents();
