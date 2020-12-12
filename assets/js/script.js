@@ -29,4 +29,52 @@ $(document).ready(function() {
             $(this).addClass("future");
         }
     })
+
+    var storedEvents = [];
+
+    initialise();
+
+    function renderEvents() {
+        $("textarea").each(function() {
+            this.value = "";
+        })
+        
+        $.each(storedEvents, function() {
+            $("textarea ." + storedEvents.eventTime).text = storedEvents.eventText;
+            console.log($("textarea ." + storedEvents.eventTime))
+        }) // Not rendering text properly
+    }
+
+    function initialise() {
+        var userEvent = JSON.parse(localStorage.getItem("events"));
+        if (userEvent !== null) {
+            events = userEvent;
+        }
+
+        renderEvents();
+    }
+
+    function storeEvents() {
+        localStorage.setItem("storedEvents", JSON.stringify(storedEvents));
+    }
+
+    $(".saveBtn").on("click", function(event) {
+        event.preventDefault();
+        var className = $(event.target).attr("class");
+
+        var eventObject = {
+            eventTime: className,
+            eventText: $("textarea." + className)[0].value
+        }
+
+        if (eventObject.eventText === "") {
+            alert("There is no event to save.")
+            return;
+        }
+
+        storedEvents.push(eventObject);
+
+        storeEvents();
+        renderEvents();
+    })
 });
