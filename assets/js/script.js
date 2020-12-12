@@ -1,5 +1,6 @@
 // DISPLAY CURRENT DATE + DAY BELOW HEADING
-// moment().format('dddd, MMMM Do, YYYY'))
+var currentDay = moment().format('dddd, MMMM Do, YYYY');
+$("#currentDay")
 
 
 // COLOR-CODE EACH TIMEBLOCK TO INDICATE WHETHER IT'S IN THE PAST, PRESENT OR FUTURE
@@ -14,3 +15,4 @@
 
 // WHEN SAVE BUTTON IS CLICKED WHEN THERE IS TEXT IN THE TIMEBLOCK, IT WILL BE SAVED IN LOCAL STORAGE
 // add click event to save buttons so that when they are clicked, textarea value is saved to local storage
+
