@@ -40,9 +40,10 @@ $(document).ready(function() {
         })
         
         $.each(storedEvents, function() {
-            $("textarea ." + storedEvents.eventTime).text = storedEvents.eventText;
+            $("textarea ." + storedEvents.eventTime).value = storedEvents.eventText;
             console.log($("textarea ." + storedEvents.eventTime))
         }) // Not rendering text properly
+        // When page is refreshed and save btn is clicked, stored objects are replaced with new object
     }
 
     function initialise() {
