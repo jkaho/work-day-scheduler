@@ -71,6 +71,8 @@ $(document).ready(function() {
             return;
         }
 
+        // if there is already an existing event for a time, replace the event, else push
+
         storedEvents.push(eventObject);
 
         storeEvents();
