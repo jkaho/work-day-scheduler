@@ -12,9 +12,8 @@ textarea {
     border-left: 1px solid black;
     padding: 10px;
     width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    height: 100%;
+    top: 0;
 }
 
 .jumbotron {
@@ -35,7 +34,7 @@ textarea {
 }
 
 .row {
-    white-space: pre-wrap;
+    /* white-space: pre-wrap; -> this is causing the textarea to shift downwards*/
     height: 80px;
     border-top: 1px solid white;;
 }
