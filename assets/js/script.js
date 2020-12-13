@@ -63,6 +63,13 @@ $(document).ready(function() {
         }
 
         storedEvents.push(eventObject);
+        
+        $.each(storedEvents, function() {
+            if (this.eventText === "") {
+                storedEvents.splice($.inArray(this, storedEvents), 1);
+            }
+        })
+
         storeEvents();
         renderEvents();
     })
