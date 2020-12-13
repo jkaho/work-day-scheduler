@@ -66,13 +66,13 @@ $(document).ready(function() {
             eventText: $("textarea." + className)[0].value
         }
 
-        if (eventObject.eventText === "") {
-            alert("There is no event to save.")
-            return;
-        }
+        // if (eventObject.eventText === "") {
+        //    alert("There is no event to save.")
+        //    return;
+        // }
 
         // if there is already an existing event for a time, replace the event, else push
-
+        
         storedEvents.push(eventObject);
 
         storeEvents();
