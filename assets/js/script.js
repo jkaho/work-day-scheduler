@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    
+
     // display current date below title 
     var currentDay = moment().format('dddd, MMMM Do, YYYY');
     $("#currentDay").text(currentDay);
@@ -67,3 +67,6 @@ $(document).ready(function() {
         renderEvents();
     })
 });
+
+// delete event if user saves empty textarea 
+// style save buttons
