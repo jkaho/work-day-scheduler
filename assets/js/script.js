@@ -73,8 +73,15 @@ $(document).ready(function() {
 
         // if there is already an existing event for a time, replace the event, else push
         
-        storedEvents.push(eventObject);
+        if (storedEvents.length > 0) {
+            $.each(storedEvents, function() {
+                if (this.eventTime === event.target.className) {
+                    storedEvents.splice($.inArray(this, storedEvents), 1);
+                }    
+            });
+        }
 
+        storedEvents.push(eventObject);
         storeEvents();
         renderEvents();
     })
