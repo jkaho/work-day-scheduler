@@ -44,11 +44,18 @@ $(document).ready(function() {
         localStorage.setItem("storedEvents", JSON.stringify(storedEvents));
     }
 
-    $(".saveBtn").on("click", function(event) {
+    $("button").on("click", function(event) {
         event.preventDefault();
+        event.stopPropagation();
 
         var className = $(event.target).attr("class");
 
+    
+        if (event.target.matches("i")) {
+            var btnParent = $(event.target).parent();
+            className = btnParent.attr("class");
+        }
+        
         var eventObject = {
             eventTime: className,
             eventText: $("textarea." + className)[0].value
@@ -75,5 +82,4 @@ $(document).ready(function() {
     })
 });
 
-// delete event if user saves empty textarea 
-// style save buttons
+// how to delete events when icon is clicked 
