@@ -84,3 +84,6 @@ button:hover {
     padding: 0;
 }
 
+i {
+    pointer-events: none;
+}

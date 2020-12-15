@@ -49,12 +49,6 @@ $(document).ready(function() {
         event.stopPropagation();
 
         var className = $(event.target).attr("class");
-
-    
-        if (event.target.matches("i")) {
-            var btnParent = $(event.target).parent();
-            className = btnParent.attr("class");
-        }
         
         var eventObject = {
             eventTime: className,
