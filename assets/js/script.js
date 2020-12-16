@@ -53,7 +53,7 @@ $(document).ready(function() {
         var eventObject = {
             eventTime: className,
             eventText: $("textarea." + className)[0].value
-        }
+        } // change JavaScript method to jQuery
 
         if (storedEvents.length > 0) {
             $.each(storedEvents, function() {
