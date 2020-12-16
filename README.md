@@ -9,7 +9,6 @@ Each time-block is colour-coded according to whether the time is in the past (gr
 ## Screenshot
 
 This is a screenshot of the deployed application.
-
 ![Work day scheduler screenshot](assets/images/screenshot.png)
 
 
