@@ -11,7 +11,6 @@ Each time-block is colour-coded according to whether the time is in the past (gr
 This is a screenshot of the deployed application.
 ![Work day scheduler screenshot](assets/images/screenshot.png)
 
-
 ## Link
 
 [Link to deployed application](https://jkaho.github.io/work-day-scheduler/)
