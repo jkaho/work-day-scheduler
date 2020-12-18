@@ -39,7 +39,6 @@ textarea {
 }
 
 .row {
-    /* white-space: pre-wrap; -> this is causing the textarea to shift downwards*/
     height: 80px;
     border-top: 1px solid white;;
 }
