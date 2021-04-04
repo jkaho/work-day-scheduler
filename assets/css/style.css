@@ -97,8 +97,8 @@ button {
     box-shadow: 2px 2px 1px rgb(104, 104, 104);
     color: white;
     padding: 0;
-    width: 60%;
-    height: 60%;
+    width: 50px;
+    height: 50px;
     margin-top: 15px;
 }
 
@@ -135,4 +135,51 @@ i {
 .footer-link a {
     color: grey;
     padding-bottom: 10px;
+}
+
+/* ------- MEDIA QUERIES ------- */
+@media (max-width: 768px) {
+    .jumbotron {
+        padding-top: 35px;
+    }
+
+    .jumbotron img {
+        width: 500px;
+    }
+
+    .container {
+        width: 95%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .col-xs-2 {
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+
+    .col-xs-8 {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+
+    #currentDay {
+        font-size: 18px;
+    }
+
+    .hour {
+        font-size: 13px;
+    }
+
+    button {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .jumbotron img {
+        width: 325px;
+    }
 }
