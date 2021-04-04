@@ -16,6 +16,16 @@ $(document).ready(function() {
         }
     })
 
+    $(".saveBtn").each(function() {
+        if (parseInt(currentHour) === parseInt(this.id.split("-")[1])) {
+            $(this).addClass("present");
+        } else if (parseInt(currentHour) > parseInt(this.id.split("-")[1])) {
+            $(this).addClass("past");
+        } else {
+            $(this).addClass("future");
+        }
+    })
+
     // client-side storage for events
     var storedEvents = [];
 

@@ -1,11 +1,23 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 16px;
     line-height: 1;
 }
 
 .container {
     margin-bottom: 50px;
+    border: solid 1px rgb(228, 227, 227);
+    border-bottom: none;
+    /* border-radius: 5px; */
+}
+
+.row {
+    border-bottom: solid 1px rgb(228, 227, 227);
+}
+
+.date {
+    text-align: center;
+    padding-top: 30px;
 }
 
 textarea {
@@ -13,7 +25,7 @@ textarea {
     border: none;
     resize: none;
     color: #000000;
-    border-left: 1px solid black;
+    border-left: solid 1px rgb(228, 227, 227);
     padding: 10px;
     width: 100%;
     height: 100%;
@@ -25,7 +37,15 @@ textarea {
     background-color: transparent;
     color: black;
     border-radius: 0;
-    border-bottom: 10px solid black;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+
+#currentDay {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    /* font-family: 'Questrial', sans-serif; */
+    text-transform: uppercase;
 }
 
 .description {
@@ -34,7 +54,6 @@ textarea {
 
 .time-block {
     text-align: center;
-    border-radius: 5px;
     padding: 0;
 }
 
@@ -46,45 +65,61 @@ textarea {
 .hour {
     background-color: #ffffff;
     color: #000000;
-    border-top: 1px dashed #000000;
-    text-align: right;
+    /* border-top: 1px dashed #000000; */
+    text-align: center;
     padding: 10px;
+    padding-top: 30px;
+    font-weight: 800;
 }
 
 .past {
-    background-color: #d3d3d3;
+    background-color: rgb(250, 249, 249);
     color: white;
 }
 
 .present {
-    background-color: #ff6961;
+    background-color: #9dd8f0;
     color: white;
 }
 
 .future {
-    background-color: #77dd77;
+    background-color: #ffe7b4;
     color: white;
 }
 
 button {
     border: none;
-    border-left: 1px solid black;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #06AED5;
+    /* border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px; */
+    border-radius: 100%;
+    background-color: #ffc5b4;
+    box-shadow: 2px 2px 1px rgb(104, 104, 104);
     color: white;
     padding: 0;
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 60%;
+    margin-top: 15px;
 }
 
 button:hover {
-    font-size: 20px;
-    transition: all .3s ease-in-out;
+    background-color: #e27f61;
+    /* font-size: 20px;
+    transition: all .3s ease-in-out; */
+}
+
+button:active {
+    box-shadow: none;
+    margin-left: 5px;
+    margin-top: 17px;
+}
+
+button:focus {
+    outline: none;
 }
 
 .saveBtn {
     padding: 0;
+    text-align: center;
 }
 
 i {
